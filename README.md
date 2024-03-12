@@ -26,3 +26,5 @@ For example, 12 (base prime) == 12 (base 10).
 This project will attempt to develop an algorithm to find these equivalent numbers in base 10 and other bases.
 
 Currently, the only number found so far is 12, searching base 10 up to 1 billion, and base 2 up to 100 million.
+
+For a mathematical document describing base prime and proving its properties, please see this [overleaf document](https://www.overleaf.com/read/pmkkkpkyfdhk#d4a440).
