@@ -1,6 +1,6 @@
 import numpy as np
 
-primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43]
 
 
 def fast_exponentiation(base, exponent):
@@ -31,11 +31,11 @@ def decimal_to_prime(number: int):
     return total
 
 
-start = 100000000
+start = 1000000000
 for number in range(start, start*10):
 
     converted_number = decimal_to_prime(number)
 
     # print(number, converted_number)
-    if number is not None and number == converted_number:
+    if converted_number is not None and number == converted_number:
         print(number)
