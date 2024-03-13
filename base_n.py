@@ -52,6 +52,7 @@ for number in range(start, end, sampling_period):
     # if converted_number is not None and number == converted_number:
         # print(number)
 
+plt.title(f"Sampling period: {sampling_period}")
 plt.xlabel(f"Base {base}")
 plt.ylabel("Base Prime")
 plt.yscale("log", base=base)
