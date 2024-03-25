@@ -1,9 +1,8 @@
 import numpy as np
-import sympy
+# import sympy
 import matplotlib.pyplot as plt
 
 primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89]
-
 
 
 def to_string_base(n: int, base: int) -> str:
@@ -69,27 +68,27 @@ def n_to_prime(n: int, base: int):
     return total
 
 
-def prime_to_n(number: int, base):
-    """
-    Reads a value in base-prime, then evaluates it as though it was in the given base.
-    Effectively the inverse of `n_to_prime()`.
-    :param number: the value to be converted.
-    :param base: the base to convert to.
-    :return: the new value, interpreted in the given base.
-    """
-    pos = 1
-    pos_factor = 1
-    total = 0
-
-    while number > 1:
-        digit, number = base_factor(number, sympy.prime(pos))
-
-        total += digit * pos_factor
-
-        pos += 1
-        pos_factor *= base
-
-    return total
+# def prime_to_n(number: int, base):
+#     """
+#     Reads a value in base-prime, then evaluates it as though it was in the given base.
+#     Effectively the inverse of `n_to_prime()`.
+#     :param number: the value to be converted.
+#     :param base: the base to convert to.
+#     :return: the new value, interpreted in the given base.
+#     """
+#     pos = 1
+#     pos_factor = 1
+#     total = 0
+#
+#     while number > 1:
+#         digit, number = base_factor(number, sympy.prime(pos))
+#
+#         total += digit * pos_factor
+#
+#         pos += 1
+#         pos_factor *= base
+#
+#     return total
 
 
 def equivalence_search(base: int, start: int, end: int):
@@ -137,7 +136,7 @@ def plot_equivalence(base: int, start: int, end: int, sampling_period: int):
     plt.yscale("log", base=base)
 
     plt.scatter(inputs, outputs)
-    # plt.plot(inputs, inputs)
+    plt.plot(inputs, inputs)
 
     plt.show()
 
@@ -149,5 +148,5 @@ if __name__ == "__main__":
 
     # equivalence_search(base, start, end)
 
-    sampling_period = 1
+    sampling_period = 10
     plot_equivalence(base, start, end, sampling_period)
